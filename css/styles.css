@@ -18,23 +18,24 @@ html {
 /* Header styles */
 header {
   display: flex;
-  position: fixed;
+  position: absolute;
+  z-index: 5;
   width: 100%;
-  height: 80px;
+  height: 100px;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.87);
   backdrop-filter: blur(3px);
 }
 header .title {
-  margin-left: 8%;
-  font-size: 18px;
+  margin-left: 9%;
+  font-size: 24px;
   font-weight: 700;
   color: var(--secondary-blue);
 }
 header .navbar {
-  width: 40%;
-  margin-right: 8%;
+  width: 640px;
+  margin-right: 9%;
 }
 header ul, a {
   color: var(--grey);
@@ -44,11 +45,12 @@ header ul, a {
 }
 header ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .btn-custom {
   color: white;
-  padding: 10px 25px;
+  cursor: pointer;
+  padding: 14px 25px;
   background-color: #2b4cca;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 44, 139, 0.25);
@@ -63,10 +65,20 @@ header ul .btn-custom a {
   width: 100%;
   height: 100vh;
 }
+.background-square {
+  position: absolute;
+  z-index: 4;
+  top: -40px;
+  left: 60px;
+  width: 160px;
+  height: 160px;
+  background-color: #f4f6fb;
+  transform: rotate(45deg);
+}
 .main .container-info {
   width: 50%;
   height: 100vh;
-  padding: 10% 8%;
+  padding: 12% 9%;
   background-color: white;
 }
 .main .container-info h1 {
@@ -75,12 +87,12 @@ header ul .btn-custom a {
   font-size: 42px;
 }
 .main .container-info p {
-  width: 320px;
-  margin: 20px 0;
+  width: 360px;
+  margin: 24px 0;
   color: var(--grey);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-line-height: 1.5;
+  line-height: 1.5;
 }
 .pins-info {
   display: flex;
@@ -100,10 +112,20 @@ line-height: 1.5;
   color: var(--dark-blue);
   font-size: 12px;
 }
+.background-square2 {
+  position: absolute;
+  z-index: 0;
+  top: 350px;
+  left: 45%;
+  width: 160px;
+  height: 160px;
+  background-color: #f4f6fb;
+  transform: rotate(45deg);
+}
 .pin-schedule {
   display: flex;
   width: 350px;
-  margin-top: 80px;
+  margin-top: 50px;
   align-items: center;
 }
 .pin-schedule span {
@@ -117,10 +139,12 @@ line-height: 1.5;
 }
 .container-info .pin-schedule p {
   color: var(--dark-blue);
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
 }
 .main .container-img {
   display: flex;
+  z-index: 2;
   width: 50%;
   height: 100vh;
   align-items: flex-end;
@@ -138,47 +162,133 @@ line-height: 1.5;
 }
 .main .container-schedule {
   display: flex;
-  width: 50%;
-  height: 100px;
+  width: 720px;
+  height: 120px;
   position: absolute;
-  left: 8%;
-  bottom: 75px;
+  z-index: 3;
+  left: 9%;
+  bottom: 30px;
   justify-content: space-evenly;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.87);
-  box-shadow: 0px 20px 42px -7px rgba(77, 133, 255, 0.51);
+  box-shadow: 0px 20px 22px -7px rgba(77, 133, 255, 0.51);
   backdrop-filter: blur(3px);
   border-radius: 4px;
 }
 .main .schedule {
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
-.main .schedule-icons {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.schedule span {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-color: rgba(94, 137, 255, 0.247);
+  border-radius: 3px;
 }
-.main .schedule-icons span {
+.schedule-title {
+  color: var(--grey);
+  margin: 4px 0 8px 0;
+}
+.schedule-info {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+.btn-submit p {
+  font-size: 14px;
+  padding: 14px 34px;
+}
+
+/* Section Benefits Styles */
+.benefits {
+  width: 100%;
+  height: 100vh;
+}
+.benefits .container-brands {
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: azure; */
+}
+.astraZeneca, .sinovac, .pfizer, .moderna {
+  width: 220px;
+  height: 80px;
+  background-image: url('../assets/img/astrazeneca.png');
+  background-size: cover;
+  background-position: center;
+  object-fit: contain;
+}
+.container-brands .sinovac {
+  background-image: url('../assets/img/Sinovac.png');
+}
+.container-brands .pfizer {
+  background-image: url('../assets/img/Pfizer.png');
+}
+.container-brands .moderna {
+  background-image: url('../assets/img/moderna.png');
+}
+.background-square3 {
+  position: absolute;
+  top: 890px;
+  left: 96%;
+  width: 140px;
+  height: 140px;
+  background-color: #f4f6fb;
+  transform: rotate(45deg);
+}
+.benefits h2 {
+  font-size: 36px;
+  color: var(--dark-blue);
+  padding: 2% 0 2% 9%;
+}
+.benefits p {
+  width: 590px;
+  color: var(--grey);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-left: 9%;
+}
+.card-container {
+  display: flex;
+  width: 1170px;
+  margin: 3% 0 0 9%;
+  justify-content: space-between;
+}
+.card {
+  width: 274px;
+  height: 320px;
+  cursor: pointer;
+  padding-top: 38px;
+  padding-left: 8px;
+  border: 1px solid rgba(137, 188, 255, 0.233);
+  border-radius: 4px;
+}
+.card:hover {
+  box-shadow: 0px 20px 42px -7px rgba(77, 133, 255, 0.51);
+  width: 280px;
+  transition: 0.5s;
+}
+.card span {
   width: 28px;
   height: 28px;
-  padding: 10px;
-  margin-right: 10px;
+  padding: 10px 20px;
+  margin-left: 20px;
   background-color: rgba(94, 137, 255, 0.247);
   box-shadow: 0px 4px 4px rgba(0, 44, 139, 0.25);
   border-radius: 3px;
 }
-.main .schedule-icons p {
-  margin-right: 70px;
-  font-size: 14px;
-  color: var(--grey);
-}
-.main .schedule-info {
-  display: flex;
-  justify-content: center;
-}
-.main .schedule-info p {
-  margin-right: 60px;
+.card .title-card {
+  width: 180px;
+  margin: 32px 0 12px 0;
   color: var(--dark-blue);
+  font-size: 18px;
+}
+.card p {
+  width: 240px;
+  color: var(--grey);
+  font-size: 14px;
 }
