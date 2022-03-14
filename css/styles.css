@@ -314,11 +314,11 @@ header ul .btn-custom a {
   background-color: #f4f6fb;
   transform: rotate(45deg);
 }
-.container-img-doctor2 {
+.container-preparations-img {
   width: 45%;
   height: 100vh;
 }
-.background-image-doctor {
+.background-image-person {
   display: flex;
   position: relative;
   width: 100%;
@@ -327,7 +327,7 @@ header ul .btn-custom a {
   align-items: flex-end;
   background-color: #237fe0;
 }
-.image-doctor {
+.image-person {
   position: absolute;
   width: 640px;
   height: 580px;
@@ -387,4 +387,116 @@ header ul .btn-custom a {
 .list:hover {
   box-shadow: 0px 20px 42px -7px rgba(77, 133, 255, 0.51);
   transition: 0.5s;
+}
+
+/* Section Emergency Contacts Styles */
+.emergency-contact {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.emergency-info {
+  width: 55%;
+  height: 100vh;
+}
+.emergency-info h2 {
+  font-size: 36px;
+  color: var(--dark-blue);
+  padding: 9% 0 2% 16%;
+}
+.emergency-info p {
+  width: 620px;
+  padding: 1% 0 2% 16%;
+  color: var(--grey);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.container-contacts {
+  display: flex;
+  width: 530px;
+  height: 410px;
+  margin: 6% 16%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.contact {
+  display: flex;
+  width: 48%;
+  height: 48%;
+  padding: 28px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(137, 188, 255, 0.233);
+  border-radius: 4px;
+}
+.icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(94, 137, 255, 0.247);
+  border-radius: 3px;
+}
+.contact-info {
+  width: 140px;
+}
+.contact-info .title {
+  color: var(--dark-blue);
+  font-size: 18px;
+}
+.contact-info p {
+  color: var(--grey);
+  font-size: 12px;
+}
+.contact .btn-custom {
+  display: flex;
+  padding: 0;
+  color: var(--secondary-blue);
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(94, 137, 255, 0.247);
+  box-shadow: none;
+}
+.contact .btn-custom:hover {
+  color: white;
+  background-color: #2b4cca;
+  box-shadow: 0px 20px 42px -7px rgba(77, 133, 255, 0.51);
+  transition: 0.5s;
+}
+.emergency-img {
+  width: 45%;
+  height: 100vh;
+}
+.background-image-nurse {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 52%;
+  top: 300px;
+  align-items: flex-end;
+  background-color: #237fe0;
+}
+.img-nurse {
+  position: absolute;
+  width: 640px;
+  height: 580px;
+  background-image: url('../assets/img/Doctor2.png');
+  background-size: cover;
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+.background-square5-size {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 2180px;
+  right: 0%;
+  overflow: hidden;
+}
+.background-square5 {
+  width: 140px;
+  height: 140px;
+  margin: 30px 0px 0px 130px;
+  background-color: #f4f6fb;
+  transform: rotate(45deg);
 }
