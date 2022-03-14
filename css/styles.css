@@ -1,10 +1,19 @@
 :root {
   /* Colors */
   --primary-blue: #2b4cca;
-  --dark-blue: #1f3e72;
   --secondary-blue: #3858d6;
-  --background-blue: #237fe0;
+  --dark-blue: #1f3e72;
+  --transparent-white: rgba(255, 255, 255, 0.87);
+  --blue-gradient: linear-gradient(90deg, rgba(53,152,230,1) 0%, rgba(54,96,218,1) 100%);
+  --background-square: #f4f6fb;
+  --shadow-blue: rgba(77, 133, 255, 0.51);
+  --shadow-blue-icon: rgba(94, 137, 255, 0.247);
+  --yellow-icon: #fff8dd;
+  --blue-icon: #dde5fc;
+  --blue-white: #eef3fe;
+  --border-blue: rgba(137, 188, 255, 0.233);
   --grey: #6d7b93;
+
 }
 * {
   box-sizing: border-box;
@@ -24,7 +33,7 @@ header {
   height: 100px;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.87);
+  background-color: var(--transparent-white);
   backdrop-filter: blur(3px);
 }
 header .title {
@@ -51,7 +60,7 @@ header ul {
   color: white;
   cursor: pointer;
   padding: 14px 25px;
-  background-color: #2b4cca;
+  background-color: var(--primary-blue);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 44, 139, 0.25);
 }
@@ -72,7 +81,7 @@ header ul .btn-custom a {
   left: 60px;
   width: 160px;
   height: 160px;
-  background-color: #f4f6fb;
+  background-color: var(--background-square);
   transform: rotate(45deg);
 }
 .main .container-info {
@@ -99,14 +108,27 @@ header ul .btn-custom a {
   width: 350px;
   align-items: center;
 }
-.pins-info span {
-  width: 34px;
-  height: 28px;
-  padding: 10px;
+.pins-info .container-icon {
+  width: 58px;
+  height: 30px;
+  padding: 7px;
   margin-right: 10px;
-  background-color: rgba(255, 231, 94, 0.247);
-  box-shadow: 0px 4px 4px rgba(139, 118, 0, 0.25);
+  background-color: var(--yellow-icon);
   border-radius: 3px;
+}
+.shield {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/shield.png');
+  background-size: cover;
+}
+.star {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/star.png');
+  background-size: cover;
 }
 .container-info .pins-info p {
   color: var(--dark-blue);
@@ -119,7 +141,7 @@ header ul .btn-custom a {
   left: 45%;
   width: 160px;
   height: 160px;
-  background-color: #f4f6fb;
+  background-color: var(--background-square);
   transform: rotate(45deg);
 }
 .pin-schedule {
@@ -128,19 +150,24 @@ header ul .btn-custom a {
   margin-top: 50px;
   align-items: center;
 }
-.pin-schedule span {
-  width: 28px;
-  height: 28px;
-  padding: 10px;
+.container-icon {
+  width: 34px;
+  height: 30px;
+  padding: 7px;
   margin-right: 10px;
-  background-color: rgba(94, 137, 255, 0.247);
-  box-shadow: 0px 4px 4px rgba(0, 44, 139, 0.25);
+  background-color: var(--blue-icon);
   border-radius: 3px;
+}
+.clock {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/clock.png');
+  background-size: cover;
 }
 .container-info .pin-schedule p {
   color: var(--dark-blue);
   font-size: 16px;
-  font-weight: 700;
 }
 .main .container-img {
   display: flex;
@@ -149,7 +176,7 @@ header ul .btn-custom a {
   height: 100vh;
   align-items: flex-end;
   justify-content: center;
-  background-color: var(--background-blue);
+  background: var(--blue-gradient);
 }
 .main .doctor-img {
   width: 360px;
@@ -170,8 +197,8 @@ header ul .btn-custom a {
   bottom: 30px;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.87);
-  box-shadow: 0px 20px 22px -7px rgba(77, 133, 255, 0.51);
+  background-color: var(--transparent-white);
+  box-shadow: 0px 20px 22px -7px var(--shadow-blue);
   backdrop-filter: blur(3px);
   border-radius: 4px;
 }
@@ -179,19 +206,36 @@ header ul .btn-custom a {
   display: flex;
   justify-content: center;
 }
-.schedule span {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  background-color: rgba(94, 137, 255, 0.247);
-  border-radius: 3px;
+.schedule .container-icon {
+  width: 30px;
+}
+.location {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/location.png');
+  background-size: cover;
+}
+.date {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/date.png');
+  background-size: cover;
+}
+.edit {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/edit.png');
+  background-size: cover;
 }
 .schedule-title {
   color: var(--grey);
   margin: 4px 0 8px 0;
 }
 .schedule-info {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--dark-blue);
 }
@@ -211,7 +255,6 @@ header ul .btn-custom a {
   height: 20vh;
   justify-content: space-evenly;
   align-items: center;
-  /* background-color: azure; */
 }
 .astraZeneca, .sinovac, .pfizer, .moderna {
   width: 220px;
@@ -242,7 +285,7 @@ header ul .btn-custom a {
   width: 140px;
   height: 140px;
   margin: 30px 0px 0px 130px;
-  background-color: #f4f6fb;
+  background-color: var(--background-square);
   transform: rotate(45deg);
 }
 .benefits h2 {
@@ -270,26 +313,52 @@ header ul .btn-custom a {
   cursor: pointer;
   padding-top: 38px;
   padding-left: 8px;
-  border: 1px solid rgba(137, 188, 255, 0.233);
+  border: 1px solid var(--border-blue);
   border-radius: 4px;
 }
 .card:hover {
-  box-shadow: 0px 20px 42px -7px rgba(77, 133, 255, 0.51);
+  box-shadow: 0px 20px 42px -7px var(--shadow-blue);
   width: 280px;
   transition: 0.5s;
 }
-.card span {
-  width: 28px;
-  height: 28px;
-  padding: 10px 20px;
+.card .container-icon {
+  width: 48px;
+  height: 48px;
+  padding: 11px;
   margin-left: 20px;
-  background-color: rgba(94, 137, 255, 0.247);
-  box-shadow: 0px 4px 4px rgba(0, 44, 139, 0.25);
-  border-radius: 3px;
+  border-radius: 6px;
+}
+.settings {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url('../assets/icons/settings.png');
+  background-size: cover;
+}
+.shield-blue {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url('../assets/icons/shieldblue.png');
+  background-size: cover;
+}
+.people {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url('../assets/icons/people.png');
+  background-size: cover;
+}
+.notification {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url('../assets/icons/notification.png');
+  background-size: cover;
 }
 .card .title-card {
   width: 180px;
-  margin: 32px 0 12px 0;
+  margin: 24px 0 12px 0;
   color: var(--dark-blue);
   font-size: 18px;
 }
@@ -311,7 +380,7 @@ header ul .btn-custom a {
   right: 96%;
   width: 180px;
   height: 180px;
-  background-color: #f4f6fb;
+  background-color: var(--background-square);
   transform: rotate(45deg);
 }
 .container-preparations-img {
@@ -325,7 +394,7 @@ header ul .btn-custom a {
   height: 52%;
   top: 290px;
   align-items: flex-end;
-  background-color: #237fe0;
+  background: var(--blue-gradient);
 }
 .image-person {
   position: absolute;
@@ -367,25 +436,62 @@ header ul .btn-custom a {
   align-items: center;
   border-radius: 4px;
 }
-.list span {
-  width: 38px;
-  height: 28px;
-  margin-right: 20px;
-  background-color: rgba(94, 137, 255, 0.247);
-  box-shadow: 0px 4px 4px rgba(0, 44, 139, 0.25);
+.container-icon-list {
+  width: 24px;
+  height: 22px;
+  padding: 6px;
+  margin-right: 10px;
+  background-color: var(--blue-icon);
   border-radius: 3px;
+}
+.shield-blue2 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/shieldblue.png');
+  background-size: cover;
+}
+.cross {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/cross.png');
+  background-size: cover;
+}
+.graphs {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/graphs.png');
+  background-size: cover;
+}
+.check {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/check.png');
+  background-size: cover;
+}
+.heart {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../assets/icons/heart.png');
+  background-size: cover;
+}
+.icon-list {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-image: url('../assets/icons/more.png');
+  background-size: cover;
 }
 .container-list .list p {
   color: var(--dark-blue);
   margin: 0;
 }
-.list .icon-list {
-  width: 34px;
-  height: 24px;
-  margin-right: 0px;
-}
 .list:hover {
-  box-shadow: 0px 20px 42px -7px rgba(77, 133, 255, 0.51);
+  box-shadow: 0px 20px 42px -7px var(--shadow-blue);
   transition: 0.5s;
 }
 
@@ -427,14 +533,43 @@ header ul .btn-custom a {
   height: 48%;
   padding: 28px;
   flex-wrap: wrap;
-  border: 1px solid rgba(137, 188, 255, 0.233);
+  border: 1px solid var(--border-blue);
   border-radius: 4px;
 }
 .icon {
   width: 48px;
   height: 48px;
-  background-color: rgba(94, 137, 255, 0.247);
+  padding: 9px;
+  background-color: var(--shadow-blue-icon);
   border-radius: 3px;
+}
+.call {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('../assets/icons/call.png');
+  background-size: cover;
+}
+.chat {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('../assets/icons/chat.png');
+  background-size: cover;
+}
+.videocall {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('../assets/icons/videocall.png');
+  background-size: cover;
+}
+.message {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('../assets/icons/message.png');
+  background-size: cover;
 }
 .contact-info {
   width: 140px;
@@ -454,13 +589,13 @@ header ul .btn-custom a {
   font-weight: 600;
   align-items: center;
   justify-content: center;
-  background-color: rgba(94, 137, 255, 0.247);
+  background-color: var(--shadow-blue-icon);
   box-shadow: none;
 }
 .contact .btn-custom:hover {
   color: white;
-  background-color: #2b4cca;
-  box-shadow: 0px 20px 42px -7px rgba(77, 133, 255, 0.51);
+  background-color: var(--primary-blue);
+  box-shadow: 0px 20px 42px -7px var(--shadow-blue);
   transition: 0.5s;
 }
 .emergency-img {
@@ -474,13 +609,13 @@ header ul .btn-custom a {
   height: 409px;
   top: 275px;
   align-items: flex-end;
-  background-color: #237fe0;
+  background: var(--blue-gradient);
 }
 .img-nurse {
   position: absolute;
   width: 640px;
   height: 580px;
-  background-image: url('../assets/img/Doctor2.png');
+  background-image: url('../assets/img/Nurse.png');
   background-size: cover;
   object-fit: contain;
   transform: scaleX(-1);
@@ -497,7 +632,7 @@ header ul .btn-custom a {
   width: 140px;
   height: 140px;
   margin: 30px 0px 0px 130px;
-  background-color: #f4f6fb;
+  background-color: var(--background-square);
   transform: rotate(45deg);
 }
 
@@ -511,7 +646,7 @@ footer {
   z-index: 2;
   color: var(--grey);
   font-size: 14px;
-  background-color: #eef3fe;
+  background-color: var(--blue-white);
 }
 .left {
   width: 50%;
